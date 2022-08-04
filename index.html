@@ -8,6 +8,27 @@
     <title>Spotify Album Cover Maker</title>
 </head>
 <body>
-    
+    <div class="title">
+        <h1>Spotify Album Cover Maker</h1>
+    </div>
+
+    <div class="options">
+        <form name="f1">
+            song_Name:  <input type="text" id="song_Name"><br>
+            artist_Name:    <input type="text" id="artist_Name"><br>
+            playlist_Name:  <input type="text" id="playlist_Name"><br>
+            is_Liked:   <input type="checkbox" id="is_Liked"><br>
+            is_Shuffle:   <input type="checkbox" id="is_Shuffle"><br>
+            is_PAL (Parental Advisory label):   <input type="checkbox" id="is_PAL"><br>
+            is_paused:   <input type="checkbox" id="is_paused"><br>
+            album_Cover <input type="file" id="album_Cover">
+        </form>
+    </div>
+
+    <div class="spotify_ss">
+        <canvas id="Album_ss_Canvas" width="1080" height="1920">
+
+        </canvas>
+    </div>
 </body>
 </html>

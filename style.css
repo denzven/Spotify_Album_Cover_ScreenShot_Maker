@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'gothamblack';
+    src: url('gotham-black-webfont.woff2') format('woff2'),
+         url('gotham-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1{
+    font-family: 'gothamblack';
+    color: #1DB954;
+}
+
+input{
+    margin: 2%;
+}
+
+body{
+    background-color: #191414;
+
+}
+.options{
+    width: 49vw;
+    height: 50vw;
+    background-color:#191414;
+    color: #1DB954;
+    float: left;
+    font-size: large;
+    font-family:'gothamblack';
+}
+
+.spotify_ss{
+    background-color: #191414;
+    float: right;
+    width: 49vw;
+    height: 50vw;
+    border-style: solid;
+    border-color: white;
+}
