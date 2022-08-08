@@ -52,28 +52,48 @@ window.onload = function () {
         var albumCoverImage = new Image();
         var UIImage = new Image();
 
+        //fills bgColor
         ctx.fillStyle = bgColor.value;
         ctx.fillRect(0,0,canvas.width,canvas.height);
 
+        //Loads ui elements
         UIImage.onload = () => {
             ctx.drawImage(UIImage, 24, 63,366,758);
         }; UIImage.src = "assets/ui/ui.png";
 
-        albumCoverImage.onload = () =>{
-            ctx.drawImage(albumCoverImage,24,157,366,366)
-        }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
-
+        // quick PAL check and loading album cover
         if (isPAL.checked) {
-            PALImage.onload = () => {
-                ctx.drawImage(PALImage,304,461,66,42)
-                console.log("hh")
-            }
-        }; PALImage.src = "assets/ui/PAL.png"
+            albumCoverImage.onload = () =>{
+                ctx.drawImage(albumCoverImage,24,157,366,366)
+                PALImage.onload = () => {
+                    ctx.drawImage(PALImage,304,461,66,42)
+                }; PALImage.src = "assets/ui/PAL.png"; 
+            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+        }else{
+            albumCoverImage.onload = () =>{
+                ctx.drawImage(albumCoverImage,24,157,366,366)
+            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+        }
 
+        //adding text
+        if (playlistName.value != "") {
 
+            
+            ctx.font = '12px gotham-black';
+            ctx.fillStyle = "white";
+            ctx.fillText(playlistName.value, 176, 67);
+        }
 
 
     });
-
-
 }
+
+// document.fonts.ready
+//   .then(() => {
+//     // do those operations after
+//     // the fonts are loaded here
+//     ....
+//   })
+//   .catch(() => {
+//     console.log("Error");
+//   });
