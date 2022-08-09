@@ -7,29 +7,30 @@
     <script type="text/javascript" src="index.js"></script>
     <title>Spotify Album Cover Maker</title>
 </head>
+
 <body>
-    <div class="title">
-        <h1>Spotify Album Cover Maker</h1>
-    </div>
     <div id="wrapper">
-        <div class="options">
+
+        <div id="title">
+            <h1>Spotify Album Cover Maker</h1>
+        </div>
+
+        <div id="options">
                 songName:      <input type="text"     id="songName">    <br>
                 artistName:    <input type="text"     id="artistName">  <br>
                 playlistName:  <input type="text"     id="playlistName"><br>
-                isLiked:       <input type="checkbox" id="isLiked">     <br>
-                isShuffle:     <input type="checkbox" id="isShuffle">   <br>
                 isPAL (Parental Advisory label):   
                                <input type="checkbox" id="isPAL">       <br>
-                isPaused:      <input type="checkbox" id="isPaused">    <br>
                 albumCover:    <input type="file"     id="albumCover">  <br>
 				bgColor:       <input type="color"    id="bgColor">     <br>
 				submit         <input type="button"   id="submit" value="submit">
         </div>
 
-        <div class="spotifyss">
+        <div id="canvas">
             <canvas id="screenshotCanvas" width="414vw" height="896vh"></canvas>
             <a id="downloadCanvas" download="Spotify_Album_Cover">Print drawing</a>
         </div>
+
     </div>
 </body>
 </html>

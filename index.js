@@ -20,10 +20,7 @@ window.onload = function () {
 | songName       : ${songName.value}
 | artistName     : ${artistName.value}
 | playlistName   : ${playlistName.value}
-| isLiked        : ${isLiked.checked}
-| isShuffle      : ${isShuffle.checked}
 | isPAL          : ${isPAL.checked}
-| isPaused       : ${isPaused.checked}
 | albumCover     : ${albumCover.value}
 | bgColor        : ${bgColor.value}
 | downloadCanvas : ${downloadCanvas.value}
@@ -79,7 +76,7 @@ window.onload = function () {
         if (playlistName.value != "") {
             document.fonts.ready
             .then(() => {
-              ctx.font = '12px gothamblack';
+              ctx.font = '12px gothammedium';
               console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(playlistName.value, 176, 67);
@@ -93,7 +90,7 @@ window.onload = function () {
         if (songName.value != "") {
             document.fonts.ready
             .then(() => {
-              ctx.font = '24px gothamblack';
+              ctx.font = '24px gothammedium';
               console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(songName.value, 26, 582);
@@ -107,7 +104,7 @@ window.onload = function () {
         if (artistName.value != "") {
             document.fonts.ready
             .then(() => {
-              ctx.font = '12px gothamblack';
+              ctx.font = '16px gothamthin';
               console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(artistName.value, 26, 616);

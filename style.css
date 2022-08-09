@@ -1,8 +1,31 @@
+/* Fonts */
 @font-face {
-    font-family: 'gothamblack';
-    src: url('assets/fonts/gotham-black-webfont.woff2') format('woff2'),
-         url('assets/fonts/gotham-black-webfont.woff') format('woff');
+    font-family: 'gothamthin';
+    src: url('assets/fonts/Gotham-Thin.otf') format("opentype");
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'gothammedium';
+    src: url('assets/fonts/GothamMedium.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.wrapper{
+
+}
+
+.title{
+
+}
+
+.options{
+
+}
+
+.canvas{
 
 }
