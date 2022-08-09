@@ -77,7 +77,6 @@ window.onload = function () {
             document.fonts.ready
             .then(() => {
               ctx.font = '12px gothammedium';
-              console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(playlistName.value, 176, 67);
             })
@@ -91,7 +90,6 @@ window.onload = function () {
             document.fonts.ready
             .then(() => {
               ctx.font = '24px gothammedium';
-              console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(songName.value, 26, 582);
             })
@@ -105,7 +103,6 @@ window.onload = function () {
             document.fonts.ready
             .then(() => {
               ctx.font = '16px gothamthin';
-              console.log("hh")
               ctx.fillStyle = "white";
               ctx.fillText(artistName.value, 26, 616);
             })

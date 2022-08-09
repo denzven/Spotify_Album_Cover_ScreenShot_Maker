@@ -13,19 +13,69 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'gothamlight';
+    src: url('assets/fonts/GothamLight.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 
+*{
+    margin: 0;
+    padding: 0;
+}
 .wrapper{
-
+    width: 100%;
+    height: 100%;
+    background-color: aqua;
 }
 
 .title{
-
+    padding: 2vw;
+    background-color: aquamarine;
 }
 
 .options{
+    background-color: blue;
+}
+
+.canvas {
+    float: left;
+    display: inline;
+    background-color: blueviolet;
+}
+
+#screenshotCanvas {
+    width: 20vw;
+    height: auto;
+    pointer-events: none; /* Chrome needs this oO */
+}
+
+/*Checkbox styles*/
+input[type="checkbox"]{
+    
+}
+
+input[type="checkbox"]:hover{
 
 }
 
-.canvas{
+input[type="checkbox"]:checked{
+
+}
+
+
+/*Checkbox styles*/
+input[type="text"]{
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+input[type="text"]:hover{
+
+}
+
+input[type="text"]:checked{
 
 }
