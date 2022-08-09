@@ -75,25 +75,46 @@ window.onload = function () {
             }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
         }
 
-        //adding text
+        //adding playlistName
         if (playlistName.value != "") {
-
-            
-            ctx.font = '12px gotham-black';
-            ctx.fillStyle = "white";
-            ctx.fillText(playlistName.value, 176, 67);
+            document.fonts.ready
+            .then(() => {
+              ctx.font = '12px gothamblack';
+              console.log("hh")
+              ctx.fillStyle = "white";
+              ctx.fillText(playlistName.value, 176, 67);
+            })
+            .catch(() => {
+              console.log("Error");
+            });
         }
 
+        //adding songName
+        if (songName.value != "") {
+            document.fonts.ready
+            .then(() => {
+              ctx.font = '24px gothamblack';
+              console.log("hh")
+              ctx.fillStyle = "white";
+              ctx.fillText(songName.value, 26, 582);
+            })
+            .catch(() => {
+              console.log("Error");
+            });
+        }
 
+        //adding artistName
+        if (artistName.value != "") {
+            document.fonts.ready
+            .then(() => {
+              ctx.font = '12px gothamblack';
+              console.log("hh")
+              ctx.fillStyle = "white";
+              ctx.fillText(artistName.value, 26, 616);
+            })
+            .catch(() => {
+              console.log("Error");
+            });
+        }
     });
 }
-
-// document.fonts.ready
-//   .then(() => {
-//     // do those operations after
-//     // the fonts are loaded here
-//     ....
-//   })
-//   .catch(() => {
-//     console.log("Error");
-//   });
