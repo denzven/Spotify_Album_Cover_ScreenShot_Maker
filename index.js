@@ -15,6 +15,7 @@ window.onload = function () {
     var albumCover     = document.getElementById("albumCover");
     var bgColor        = document.getElementById("bgColor")
     var downloadCanvas = document.getElementById("downloadCanvas");
+    var watermark      = document.getElementById("watermark");
     var chkstr         = 
 `_________________________________________
 | songName       : ${songName.value}
@@ -86,7 +87,8 @@ window.onload = function () {
             .then(() => {
               ctx.font = '12px gothammedium';
               ctx.fillStyle = "white";
-              ctx.fillText(playlistName.value, 176, 67);
+              ctx.textAlign = "center";
+              ctx.fillText(playlistName.value, 212, 67);
             })
             .catch(() => {
               console.log("Error");
@@ -99,6 +101,7 @@ window.onload = function () {
             .then(() => {
               ctx.font = '24px gothammedium';
               ctx.fillStyle = "white";
+              ctx.textAlign = "start";
               ctx.fillText(songName.value, 26, 582);
             })
             .catch(() => {

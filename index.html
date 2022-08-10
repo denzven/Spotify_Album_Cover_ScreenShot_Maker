@@ -9,11 +9,11 @@
 </head>
 
 <body>
+    <div class="title">
+        <h1>Spotify Album Cover Maker</h1>
+    </div>
     <div class="wrapper">
 
-        <div class="title">
-            <h1>Spotify Album Cover Maker</h1>
-        </div>
 
         <div class="options">
                 songName:      <input type="text"     id="songName">    <br>
@@ -22,13 +22,13 @@
                 isPAL (Parental Advisory label):   
                                <input type="checkbox" id="isPAL">       <br>
                 albumCover:    <input type="file"     id="albumCover">  <br>
-				bgColor:       <input type="color"    id="bgColor" value="#191414">     <br>
+				bgColor:       <input type="color"    id="bgColor" value="#1A1A1A">     <br>
 				               <input type="button"   id="submit" value="submit">
                                <a id="downloadCanvas" download="Spotify_Album_Cover">Print drawing</a>
         </div>
 
         <div class="canvas">
-            <canvas id="screenshotCanvas" width="414vw" height="896vh"></canvas>
+            <canvas id="screenshotCanvas" width="414px" height="896px"></canvas>
         </div>
     </div>
 </body>
