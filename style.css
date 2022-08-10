@@ -21,8 +21,8 @@
 }
 
 *{
- padding: 0;
- margin: 0;
+    padding: 0;
+    margin: 0;
 }
 .wrapper{
     width: 100%;
@@ -48,6 +48,12 @@
 
 .canvas {
 
+}
+
+#screenshotCanvas{
+    border:solid 2px;
+    border-color:#191414;
+    margin: 50px;
 }
 
 #screenshotCanvas:hover {
@@ -114,14 +120,16 @@ input[type="text"]{
     background-color: #191414;
     border-color: #191414;
     border-bottom-color: #1DB954;
+    color: white;
+    font: 'gothamlight';
     padding: 10px;
     margin: 5px;
 }
 
-input[type="text"]:hover{
-
+input[type="text"]:focus{
+    outline: none;
 }
 
-input[type="text"]:checked{
-
+input[type="text"]:hover{
+    background-color: #272121;
 }
