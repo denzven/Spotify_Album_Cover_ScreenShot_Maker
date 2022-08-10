@@ -32,6 +32,14 @@ window.onload = function () {
         downloadCanvas.href = (canvas.toDataURL('image/png', 1))
     })
 
+    // Adding Press enter to submit functionanlity
+    window.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("submit").click();
+        }
+      }); 
+
     // On clicking submit btn
     document.getElementById('submit').addEventListener('click',() => {
 
