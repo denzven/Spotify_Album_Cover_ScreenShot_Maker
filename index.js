@@ -86,20 +86,6 @@ window.onload = function () {
             ctx.drawImage(UIImage, UIx,UIy,UIw,UIh);
         }; UIImage.src = "assets/ui/ui.png";
 
-        // quick PAL check and loading album cover
-        if (isPAL.checked) {
-            albumCoverImage.onload = () =>{
-                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
-                PALImage.onload = () => {
-                    ctx.drawImage(PALImage,PALx,PALy,PALw,PALh)
-                }; PALImage.src = "assets/ui/PAL.png"; 
-            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
-        }else{
-            albumCoverImage.onload = () =>{
-                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
-            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
-        }
-
         //adding playlistName
         if (playlistName.value != "") {
             document.fonts.ready
@@ -112,7 +98,7 @@ window.onload = function () {
             .catch(() => {
               console.log("Error");
             });
-        }
+        };
 
         //adding songName
         if (songName.value != "") {
@@ -126,7 +112,7 @@ window.onload = function () {
             .catch(() => {
               console.log("Error");
             });
-        }
+        };
 
         //adding artistName
         if (artistName.value != "") {
@@ -139,6 +125,20 @@ window.onload = function () {
             .catch(() => {
               console.log("Error");
             });
-        }
+        };
+
+        // quick PAL check and loading album cover
+        if (isPAL.checked) {
+            albumCoverImage.onload = () =>{
+                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
+                PALImage.onload = () => {
+                    ctx.drawImage(PALImage,PALx,PALy,PALw,PALh)
+                }; PALImage.src = "assets/ui/PAL.png"; 
+            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+        }else{
+            albumCoverImage.onload = () =>{
+                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
+            }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+        };
     });
 }
