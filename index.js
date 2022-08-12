@@ -36,7 +36,7 @@ window.onload = function () {
     var [PALx,PALy,PALw,PALh] = [304,461,66,42]
 
     //Text
-    var [songNamex,songNamey,songNamec] = [26, 582,36]
+    var [songNamex,songNamey,songNamec] = [25, 582,25]
     var [artistNamex,artistNamey,artistNamec] = [26,616,36]
     var [playlistNamex,playlistNamey,playlistNamec] = [212, 67,33]
 
