@@ -23,16 +23,22 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --spotifyBlack: #1A1A1A;
+  --spotifyGreen: #1ed760;
 }
 
 body{
-    background-color: #1A1A1A;
+    background-color: var(--spotifyBlack);
 }
 
 .wrapper{
     width: 100%;
     height:100%;
-    background-color: #1A1A1A;
+    background-color: var(--spotifyBlack);
     display: flex;
     white-space: nowrap;
     flex-wrap: wrap;
@@ -42,7 +48,7 @@ body{
     width:100%;
     font-family: 'gothammedium';
     font-size: 32px;
-    color: #1ed760;
+    color: var(--spotifyGreen);
     padding: 10px;
 }
 
@@ -50,7 +56,7 @@ body{
     padding: 20px;
     font-family:'gothamlight' ;
     font-size: 24px;
-    color: #1ed760;
+    color: var(--spotifyGreen);
     line-height: 50px;
     justify-content: space-around;
 }
@@ -64,8 +70,8 @@ footer{
     padding: 20px;
     font-family:'gothamlight' ;
     font-size: 16px;
-    background-color:#1ed760;
-    color:#1A1A1A;
+    background-color:var(--spotifyGreen);
+    color:var(--spotifyBlack);
 }
 
 .canvas {
@@ -76,21 +82,21 @@ footer{
     height: 80%;
     background-color:#333333;
     border:solid 2px;
-    border-color:#1A1A1A;
+    border-color:var(--spotifyBlack);
     margin: 0 0  0 10vw;
 }
 
 #screenshotCanvas:hover {
     border:solid 2px;
-    border-color: #1ed760;
+    border-color: var(--spotifyGreen);
 }
 
 /*download Canvas btn*/
 #downloadCanvas {
     cursor: pointer;
-    background-color: #1ed760;
+    background-color: var(--spotifyGreen);
     border-radius: 10px;
-    color: #1A1A1A;
+    color: var(--spotifyBlack);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -107,10 +113,10 @@ footer{
 /*download Canvas btn*/
 #submit {
     cursor: pointer;
-    background-color: #1ed760;
+    background-color: var(--spotifyGreen);
     border: none;
     border-radius: 10px;
-    color: #1A1A1A;
+    color: var(--spotifyBlack);
     margin: 30px;
     padding: 15px 32px;
     text-align: center;
@@ -140,10 +146,10 @@ input[type="checkbox"]:checked{
 
 /*Textbox styles*/
 input[type="text"]{
-    background-color: #1A1A1A;
+    background-color: var(--spotifyBlack);
     border-style: solid;
-    border-color: #1A1A1A;
-    border-bottom-color: #1ed760;
+    border-color: var(--spotifyBlack);
+    border-bottom-color: var(--spotifyGreen);
     color: white;
     font: 'gothamlight';
     font-size: 20px;
