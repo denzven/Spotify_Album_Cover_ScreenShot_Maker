@@ -27,6 +27,25 @@ window.onload = function () {
 | downloadCanvas : ${downloadCanvas.value}
  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 `
+    // ------------------------------------------- //
+    //Coords List
+
+    //Images
+    var [UIx,UIy,UIw,UIh] = [24,63,366,758]
+    var [albumCoverx,albumCovery,albumCoverw,albumCoverh] = [24,157,366,366]
+    var [PALx,PALy,PALw,PALh] = [304,461,66,42]
+
+    //Text
+    var [songNamex,songNamey,songNamec] = [26, 582,36]
+    var [artistNamex,artistNamey,artistNamec] = [26,616,36]
+    var [playlistNamex,playlistNamey,playlistNamec] = [212, 67,33]
+
+    // ------------------------------------------- //
+
+    // Clipping Text
+    var songNameVal     = songName.value.length > songNamec ? songName.value.slice(0,songNamec) + "..." : songName.value;
+    var artistNameVal   = artistName.value.length > artistNamec ? artistName.value.slice(0,artistNamec) + "..." : artistName.value;
+    var playlistNameVal = playlistName.value.length > playlistNamec ? playlistName.value.slice(0,playlistNamec) + "..." : playlistName.value;    
 
     //Download Canvas
     downloadCanvas.addEventListener('click', () => {
@@ -64,20 +83,20 @@ window.onload = function () {
 
         //Loads ui elements
         UIImage.onload = () => {
-            ctx.drawImage(UIImage, 24, 63,366,758);
+            ctx.drawImage(UIImage, UIx,UIy,UIw,UIh);
         }; UIImage.src = "assets/ui/ui.png";
 
         // quick PAL check and loading album cover
         if (isPAL.checked) {
             albumCoverImage.onload = () =>{
-                ctx.drawImage(albumCoverImage,24,157,366,366)
+                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
                 PALImage.onload = () => {
-                    ctx.drawImage(PALImage,304,461,66,42)
+                    ctx.drawImage(PALImage,PALx,PALy,PALw,PALh)
                 }; PALImage.src = "assets/ui/PAL.png"; 
             }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
         }else{
             albumCoverImage.onload = () =>{
-                ctx.drawImage(albumCoverImage,24,157,366,366)
+                ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
             }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
         }
 
@@ -88,7 +107,7 @@ window.onload = function () {
               ctx.font = '12px gothammedium';
               ctx.fillStyle = "white";
               ctx.textAlign = "center";
-              ctx.fillText(playlistName.value, 212, 67);
+              ctx.fillText(playlistNameVal,playlistNamex,playlistNamey);
             })
             .catch(() => {
               console.log("Error");
@@ -102,7 +121,7 @@ window.onload = function () {
               ctx.font = '24px gothammedium';
               ctx.fillStyle = "white";
               ctx.textAlign = "start";
-              ctx.fillText(songName.value, 26, 582);
+              ctx.fillText(songNameVal,songNamex,songNamey);
             })
             .catch(() => {
               console.log("Error");
@@ -115,7 +134,7 @@ window.onload = function () {
             .then(() => {
               ctx.font = '16px gothamthin';
               ctx.fillStyle = "white";
-              ctx.fillText(artistName.value, 26, 616);
+              ctx.fillText(artistNameVal,artistNamex,artistNamey);
             })
             .catch(() => {
               console.log("Error");
