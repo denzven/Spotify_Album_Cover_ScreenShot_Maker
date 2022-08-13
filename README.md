@@ -1,12 +1,12 @@
-# This is Spotify Album Cover ScreenShot Maker
 
-check out the website: [Click Here](https://denzven.github.io/Spotify_Album_Cover_ScreenShot_Maker/)
+<h1>This is Spotify Album Cover ScreenShot Maker</h1>
 
-this website helps you to make silly screenshots of fake spotify albums and add PAL (Parental Advisory Label) to them and add custom song name and artist name and playlist name
+<p>check out the website: <a href="https://denzven.github.io/Spotify_Album_Cover_ScreenShot_Maker/">Click Here</a></p>
 
-Inspired by the [Album Cover Trend](https://www.google.com/search?hl=en&q=proof+anything+can+be+a+album+cover+trend)
+<p>this website helps you to make silly screenshots of fake spotify albums and add PAL (Parental Advisory Label) to them and add custom song name anartist name and playlist name</p>
 
+<p>Inspired by the <a href="https://www.google.com/search?hl=en&amp;q=proof+anything+can+be+a+album+cover+trend">Album Cover Trend</a></p>
 
-Some cool Examples 👇
-
-![Spotify Album Cover Collage](/assets/Examples/Spotify_Album_Cover_Collage.png)
+<p>Some cool Examples 👇</p>
+<p><img src="/assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></p>
+<img src="readmesneak.svg" width="1080" height="1920">
