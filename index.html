@@ -33,21 +33,21 @@
         <h1>Spotify Album Cover Maker</h1>
     </div>
     <div class="wrapper">
-
-
-        <div class="options">
-                songName:      <input type="text"     id="songName">    <br>
-                artistName:    <input type="text"     id="artistName">  <br>
-                playlistName:  <input type="text"     id="playlistName"><br>
-                isPAL (Parental Advisory label):   
-                               <input type="checkbox" id="isPAL">       <br>
-                albumCover:    <input type="file"     id="albumCover">  <br>
-				bgColor:       <input type="color"    id="bgColor" value="#1A1A1A">     <br>
-				               <input type="button"   id="submit" value="submit">
-                               <a id="downloadCanvas" download="Spotify_Album_Cover">Print drawing</a>
+        <div class="options-wrapper">
+            <div class="options">
+                    songName:      <input type="text"     id="songName">    <br>
+                    artistName:    <input type="text"     id="artistName">  <br>
+                    playlistName:  <input type="text"     id="playlistName"><br>
+                    isPAL (Parental Advisory label):   
+                                   <input type="checkbox" id="isPAL">       <br>
+                    albumCover:    <input type="file"     id="albumCover">  <br>
+				    bgColor:       <input type="color"    id="bgColor" value="#1A1A1A"><br>
+				                   <input type="button"   id="submit" value="submit">
+                                   <a id="downloadCanvas" download="Spotify_Album_Cover">Print drawing</a>
+        </div>
         </div>
 
-        <div class="canvas">
+        <div class="canvas-wrapper">
             <canvas id="screenshotCanvas" width="414px" height="896px"></canvas>
         </div>
     </div>

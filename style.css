@@ -29,6 +29,7 @@
 :root {
   --spotifyBlack: #1A1A1A;
   --spotifyGreen: #1ed760;
+  --spotifyGrey:  #333333;
 }
 
 body{
@@ -36,10 +37,9 @@ body{
 }
 
 .wrapper{
-    width: 100%;
-    height:100%;
     background-color: var(--spotifyBlack);
     display: flex;
+    justify-content: center;
     white-space: nowrap;
     flex-wrap: wrap;
 }
@@ -50,15 +50,21 @@ body{
     font-size: 32px;
     color: var(--spotifyGreen);
     padding: 10px;
+    text-align: center;
+}
+
+.options-wrapper{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .options{
-    padding: 20px;
     font-family:'gothamlight' ;
     font-size: 24px;
     color: var(--spotifyGreen);
     line-height: 50px;
-    justify-content: space-around;
+    height: auto;
 }
 
 footer{
@@ -74,16 +80,18 @@ footer{
     color:var(--spotifyBlack);
 }
 
-.canvas {
-
+.canvas-wrapper{
+    height: auto;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
 }
 
 #screenshotCanvas{
     height: 80%;
-    background-color:#333333;
+    background-color:var(--spotifyGrey);
     border:solid 2px;
     border-color:var(--spotifyBlack);
-    margin: 0 0  0 10vw;
 }
 
 #screenshotCanvas:hover {
@@ -133,15 +141,23 @@ footer{
 
 /*Checkbox styles*/
 input[type="checkbox"]{
-    
+    -webkit-appearance:none;
+    height:20px;
+    width:20px;
+    background-color: var(--spotifyGrey);
+    cursor: pointer;
+    border: 2px solid var(--spotifyGreen);
+    border-radius: 2px;
+    opacity: 0.6;
 }
 
 input[type="checkbox"]:hover{
-
+    opacity: 1;
 }
 
 input[type="checkbox"]:checked{
-
+    background-color: var(--spotifyGreen);
+    opacity: 1;
 }
 
 /*Textbox styles*/
@@ -153,7 +169,6 @@ input[type="text"]{
     color: white;
     font: 'gothamlight';
     font-size: 20px;
-    /* padding: 5px 20px 5px 20px; */
     margin: 5px;
 }
 
@@ -162,5 +177,5 @@ input[type="text"]:focus{
 }
 
 input[type="text"]:hover{
-    background-color: #333333;
+    background-color: var(--spotifyGrey);
 }
