@@ -58,6 +58,12 @@ window.onload = function () {
           event.preventDefault();
           document.getElementById("submit").click();
         }
+
+        if (event.ctrlKey && event.key =='p') {
+          event.preventDefault();
+          downloadCanvas.click();
+          console.log("crtle p")
+        }
       }); 
 
     // On clicking submit btn
@@ -86,46 +92,28 @@ window.onload = function () {
             ctx.drawImage(UIImage, UIx,UIy,UIw,UIh);
         }; UIImage.src = "assets/ui/ui.png";
 
-        //adding playlistName
-        if (playlistName.value != "") {
-            document.fonts.ready
-            .then(() => {
-              ctx.font = '12px gothammedium';
-              ctx.fillStyle = "white";
-              ctx.textAlign = "center";
-              ctx.fillText(playlistNameVal,playlistNamex,playlistNamey);
-            })
-            .catch(() => {
-              console.log("Error");
-            });
-        };
+        // Loading Fonts
+        document.fonts.ready
+        .then(() => {
+            //adding playlistName
+            ctx.font = '12px gothammedium';
+            ctx.fillStyle = "white";
+            ctx.textAlign = "center";
+            ctx.fillText(playlistNameVal,playlistNamex,playlistNamey);
 
-        //adding songName
-        if (songName.value != "") {
-            document.fonts.ready
-            .then(() => {
-              ctx.font = '24px gothammedium';
-              ctx.fillStyle = "white";
-              ctx.textAlign = "start";
-              ctx.fillText(songNameVal,songNamex,songNamey);
-            })
-            .catch(() => {
-              console.log("Error");
-            });
-        };
+            //adding songName
+            ctx.font = '24px gothammedium';
+            ctx.fillStyle = "white";
+            ctx.textAlign = "start";
+            ctx.fillText(songNameVal,songNamex,songNamey);
 
-        //adding artistName
-        if (artistName.value != "") {
-            document.fonts.ready
-            .then(() => {
-              ctx.font = '16px gothamthin';
-              ctx.fillStyle = "white";
-              ctx.fillText(artistNameVal,artistNamex,artistNamey);
-            })
-            .catch(() => {
-              console.log("Error");
-            });
-        };
+            //adding artistName
+            ctx.font = '16px gothamthin';
+            ctx.fillStyle = "white";
+            ctx.fillText(artistNameVal,artistNamex,artistNamey);
+        }).catch(() => {
+          console.log("Error");
+        });
 
         // quick PAL check and loading album cover
         if (isPAL.checked) {
