@@ -47,7 +47,7 @@ body{
 .title{
     width:100%;
     font-family: 'gothammedium';
-    font-size: 32px;
+    font-size: 26px;
     color: var(--spotifyGreen);
     padding: 10px;
     text-align: center;
@@ -78,6 +78,11 @@ footer{
     font-size: 16px;
     background-color:var(--spotifyGreen);
     color:var(--spotifyBlack);
+}
+
+a{
+    color: var(--spotifyBlack);
+    font-family: 'gothammedium';
 }
 
 .canvas-wrapper{
