@@ -63,6 +63,7 @@
         	width:95%;
         	align:center;
         }
+        
       </style>
     	<body>
 			<h1>Spotify Album Cover ScreenShot Maker</h1>
@@ -74,7 +75,7 @@
 			<p>Inspired by the <a href="https://www.google.com/search?hl=en&amp;q=proof+anything+can+be+a+album+cover+trend">Album Cover Trend</a></p>
 			
 			<p>Some cool Examples 👇</p>
-			<p><img src="assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></img></p>
+			<p><img src="https://raw.githubusercontent.com/denzven/Spotify_Album_Cover_ScreenShot_Maker/main/assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></img></p>
 		</body>
 
     </div>
