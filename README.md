@@ -9,4 +9,4 @@
 
 <p>Some cool Examples 👇</p>
 <p><img src="/assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></p>
-<img src="readmesneak.svg" width="1080" height="1920">
+<p><img src="readmesneak.svg" width="1080" height="1200"></p>
