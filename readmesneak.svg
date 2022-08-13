@@ -30,6 +30,13 @@
   			--spotifyGrey:  #333333;
 		}
 
+		body{
+    		background-color: var(--spotifyBlack);
+    		width:100%;
+    		height:100%;
+    		padding:20px;
+    	}
+
         h1{
         	text-align:center;
         	background-color: var(--spotifyGreen);
@@ -38,18 +45,32 @@
         	width:100%;
         	font-family: 'gothammedium';
         }
-      </style>
 
-		<h1>Spotify Album Cover ScreenShot Maker</h1>
-		
-		<p>check out the website: <a href="https://denzven.github.io/Spotify_Album_Cover_ScreenShot_Maker/">Click Here</a></p>
-		
-		<p>this website helps you to make silly screenshots of fake spotify albums and add PAL (Parental Advisory Label) to them and add custom song name and artist name and playlist name</p>
-		
-		<p>Inspired by the <a href="https://www.google.com/search?hl=en&amp;q=proof+anything+can+be+a+album+cover+trend">Album Cover Trend</a></p>
-		
-		<p>Some cool Examples 👇</p>
-		<p><img src="assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></img></p>
+        p{
+        	color: var(--spotifyGreen);
+        	font-family: 'gothamlight';
+        	padding:10px;
+
+        }
+
+        a{
+            color: var(--spotifyGreen);
+        	font-family: 'gothamlight';
+        	padding:10px;
+        }
+      </style>
+    	<body>
+			<h1>Spotify Album Cover ScreenShot Maker</h1>
+			
+			<p>check out the website: <a href="https://denzven.github.io/Spotify_Album_Cover_ScreenShot_Maker/">Click Here</a></p>
+			
+			<p>this website helps you to make silly screenshots of fake spotify albums and add PAL (Parental Advisory Label) to them and add custom song name and artist name and playlist name</p>	
+			
+			<p>Inspired by the <a href="https://www.google.com/search?hl=en&amp;q=proof+anything+can+be+a+album+cover+trend">Album Cover Trend</a></p>
+			
+			<p>Some cool Examples 👇</p>
+			<p><img src="assets/Examples/Spotify_Album_Cover_Collage.png" alt="Spotify Album Cover Collage"></img></p>
+		</body>
 
     </div>
   </foreignObject>
