@@ -35,12 +35,12 @@ window.onload = function () {
     fetch("assets/presets.json").then(
         res => res.json()
     ).then(
-        data = data => jsonFile = JSON.parse(data)
+        data => jsonFile = JSON.parse(data)
     );
     var preset = "default";
 
     console.log(data)
-    console.log(data.[preset].["UI"].["x"]) //24
+    //console.log(data.[preset].["UI"].["x"]) //24
 
     //Images
     var [UIx,UIy,UIw,UIh] = [24,63,366,758]
