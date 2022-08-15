@@ -29,26 +29,21 @@ window.onload = function () {
 `
     // ------------------------------------------- //
     //Coords List from JSON
-    var jsonFile;
-    var data;
-    var res;
     var request = new XMLHttpRequest();
-    request.open("GET", "/assets/presets.json", false);
-    request.send(null)
+    request.open("GET", "https://raw.githubusercontent.com/denzven/Spotify_Album_Cover_ScreenShot_Maker/main/assets/presets.json", false);
     var data = JSON.parse(request.responseText);
 
-    console.log(data);
-    //console.log(data.[preset].["UI"].["x"]) //24
+    var preset = "default"
 
     //Images
-    var [UIx,UIy,UIw,UIh] = [24,63,366,758]
-    var [albumCoverx,albumCovery,albumCoverw,albumCoverh] = [24,157,366,366]
-    var [PALx,PALy,PALw,PALh] = [304,461,66,42]
+    var [UIx,UIy,UIw,UIh] = [data[preset]["UI"]["x"],data[preset]["UI"]["y"],data[preset]["UI"]["w"],data[preset]["UI"]["h"]]
+    var [albumCoverx,albumCovery,albumCoverw,albumCoverh] = [[data[preset]["albumCover"]["x"],data[preset]["albumCover"]["y"],data[preset]["albumCover"]["w"],data[preset]["albumCover"]["h"]]]
+    var [PALx,PALy,PALw,PALh] = [data[preset]["PAL"]["x"],data[preset]["PAL"]["y"],data[preset]["PAL"]["w"],data[preset]["PAL"]["h"]]
 
     //Text
-    var [songNamex,songNamey,songNamec] = [25, 582,25]
-    var [artistNamex,artistNamey,artistNamec] = [26,616,36]
-    var [playlistNamex,playlistNamey,playlistNamec] = [212, 67,33]
+    var [songNamex,songNamey,songNamec] = [data[preset]["songName"]["x"],data[preset]["songName"]["y"],data[preset]["songName"]["c"]]
+    var [artistNamex,artistNamey,artistNamec] = [data[preset]["artistName"]["x"],data[preset]["artistName"]["y"],data[preset]["artistName"]["c"]]
+    var [playlistNamex,playlistNamey,playlistNamec] = [data[preset]["playlistName"]["x"],data[preset]["playlistName"]["y"],data[preset]["playlistName"]["c"]]
 
     // ------------------------------------------- //
 
