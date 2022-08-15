@@ -31,6 +31,7 @@ window.onload = function () {
     //Coords List from JSON
     var request = new XMLHttpRequest();
     request.open("GET", "https://raw.githubusercontent.com/denzven/Spotify_Album_Cover_ScreenShot_Maker/main/assets/presets.json", false);
+    request.send(null)
     var data = JSON.parse(request.responseText);
 
     var preset = "default"
@@ -121,6 +122,7 @@ window.onload = function () {
         });
 
         // quick PAL check and loading album cover
+        try{
         if (isPAL.checked) {
             albumCoverImage.onload = () =>{
                 ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
@@ -133,5 +135,8 @@ window.onload = function () {
                 ctx.drawImage(albumCoverImage,albumCoverx,albumCovery,albumCoverw,albumCoverh)
             }; albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
         };
+        }catch(err){
+            console.log(err)
+        }
     });
 }
