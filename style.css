@@ -44,14 +44,17 @@ body {
   flex-wrap: wrap;
 }
 
-.title {
+.nav-bar {
   width: 100%;
   font-family: "gothammedium";
   font-size: 26px;
-  color: var(--spotifyGreen);
+  color: var(--spotifyBlack);
+  background-color: var(--spotifyGreen);
   padding: 10px;
+  margin: 0 0 20px 0;
   text-align: center;
 }
+
 
 .options-wrapper {
   flex-grow: 1;
@@ -186,11 +189,17 @@ input[type="text"]:hover {
 }
 
 #preloader {
-  background: var(--spotifyBlack) url("assets/ui/preloader.gif") no-repeat
-    center center;
+  background: var(--spotifyBlack) url("assets/ui/preloader.gif") no-repeat center center;
   background-size: 100px;
-  height: 100%;
-  width: 100%;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.9;
   position: fixed;
   z-index: 100;
 }
