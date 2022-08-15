@@ -91,15 +91,6 @@ window.onload = function () {
         };
         UIImage.src = "assets/ui/ui.png";
 
-        //load album cover
-        try {
-            albumCoverImage.onload = () => {
-                ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
-            };
-            albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
-        } catch (err) {
-            console.log(err)
-        }
         // Loading Fonts
         document.fonts.ready
             .then(() => {
@@ -122,11 +113,24 @@ window.onload = function () {
             });
 
         // quick PAL check and loading album cover
-        if (isPAL.checked) {
-            PALImage.onload = () => {
-                ctx.drawImage(PALImage, PALx, PALy, PALw, PALh)
+        try {
+            if (isPAL.checked) {
+                albumCoverImage.onload = () => {
+                    ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
+                    PALImage.onload = () => {
+                        ctx.drawImage(PALImage, PALx, PALy, PALw, PALh)
+                    };
+                    PALImage.src = "assets/ui/PAL.png";
+                };
+                albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+            } else {
+                albumCoverImage.onload = () => {
+                    ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
+                };
+                albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
             };
-            PALImage.src = "assets/ui/PAL.png";
+        } catch (err) {
+            console.log(err)
         }
     });
 }
