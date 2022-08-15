@@ -1,195 +1,196 @@
 /* Fonts */
 @font-face {
-    font-family: 'gothamthin';
-    src: url('assets/fonts/Gotham-Thin.otf') format("opentype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gothamthin";
+  src: url("assets/fonts/Gotham-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'gothammedium';
-    src: url('assets/fonts/GothamMedium.ttf') format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gothammedium";
+  src: url("assets/fonts/GothamMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'gothamlight';
-    src: url('assets/fonts/GothamLight.ttf') format("truetype");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "gothamlight";
+  src: url("assets/fonts/GothamLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --spotifyBlack: #1A1A1A;
+  --spotifyBlack: #1a1a1a;
   --spotifyGreen: #1ed760;
-  --spotifyGrey:  #333333;
+  --spotifyGrey: #333333;
 }
 
-body{
-    background-color: var(--spotifyBlack);
+body {
+  background-color: var(--spotifyBlack);
 }
 
-.wrapper{
-    background-color: var(--spotifyBlack);
-    display: flex;
-    justify-content: center;
-    white-space: nowrap;
-    flex-wrap: wrap;
+.wrapper {
+  background-color: var(--spotifyBlack);
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
-.title{
-    width:100%;
-    font-family: 'gothammedium';
-    font-size: 26px;
-    color: var(--spotifyGreen);
-    padding: 10px;
-    text-align: center;
+.title {
+  width: 100%;
+  font-family: "gothammedium";
+  font-size: 26px;
+  color: var(--spotifyGreen);
+  padding: 10px;
+  text-align: center;
 }
 
-.options-wrapper{
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
+.options-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.options{
-    font-family:'gothamlight' ;
-    font-size: 24px;
-    color: var(--spotifyGreen);
-    line-height: 50px;
-    height: auto;
+.options {
+  font-family: "gothamlight";
+  font-size: 24px;
+  color: var(--spotifyGreen);
+  line-height: 50px;
+  height: auto;
 }
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    font-family:'gothamlight' ;
-    font-size: 16px;
-    background-color:var(--spotifyGreen);
-    color:var(--spotifyBlack);
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  font-family: "gothamlight";
+  font-size: 16px;
+  background-color: var(--spotifyGreen);
+  color: var(--spotifyBlack);
 }
 
-a{
-    color: var(--spotifyBlack);
-    font-family: 'gothammedium';
+a {
+  color: var(--spotifyBlack);
+  font-family: "gothammedium";
 }
 
-.canvas-wrapper{
-    height: auto;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
+.canvas-wrapper {
+  height: auto;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
-#screenshotCanvas{
-    height: 80%;
-    background-color:var(--spotifyGrey);
-    border:solid 2px;
-    border-color:var(--spotifyBlack);
+#screenshotCanvas {
+  height: 80%;
+  background-color: var(--spotifyGrey);
+  border: solid 2px;
+  border-color: var(--spotifyBlack);
 }
 
 #screenshotCanvas:hover {
-    border:solid 2px;
-    border-color: var(--spotifyGreen);
+  border: solid 2px;
+  border-color: var(--spotifyGreen);
 }
 
 /*download Canvas btn*/
 #downloadCanvas {
-    cursor: pointer;
-    background-color: var(--spotifyGreen);
-    border-radius: 10px;
-    color: var(--spotifyBlack);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 16px;
-    font-family: 'gothammedium';
-    opacity: 0.6;
+  cursor: pointer;
+  background-color: var(--spotifyGreen);
+  border-radius: 10px;
+  color: var(--spotifyBlack);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  font-family: "gothammedium";
+  opacity: 0.6;
 }
 
-#downloadCanvas:hover{
-    opacity: 1;
+#downloadCanvas:hover {
+  opacity: 1;
 }
 
 /*download Canvas btn*/
 #submit {
-    cursor: pointer;
-    background-color: var(--spotifyGreen);
-    border: none;
-    border-radius: 10px;
-    color: var(--spotifyBlack);
-    margin: 30px;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: 'gothammedium';
-    opacity: 0.6;
+  cursor: pointer;
+  background-color: var(--spotifyGreen);
+  border: none;
+  border-radius: 10px;
+  color: var(--spotifyBlack);
+  margin: 30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "gothammedium";
+  opacity: 0.6;
 }
 
-#submit:hover{
-    opacity: 1;
+#submit:hover {
+  opacity: 1;
 }
 
 /*Checkbox styles*/
-input[type="checkbox"]{
-    -webkit-appearance:none;
-    height:20px;
-    width:20px;
-    background-color: var(--spotifyGrey);
-    cursor: pointer;
-    border: 2px solid var(--spotifyGreen);
-    border-radius: 2px;
-    opacity: 0.6;
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: var(--spotifyGrey);
+  cursor: pointer;
+  border: 2px solid var(--spotifyGreen);
+  border-radius: 2px;
+  opacity: 0.6;
 }
 
-input[type="checkbox"]:hover{
-    opacity: 1;
+input[type="checkbox"]:hover {
+  opacity: 1;
 }
 
-input[type="checkbox"]:checked{
-    background-color: var(--spotifyGreen);
-    opacity: 1;
+input[type="checkbox"]:checked {
+  background-color: var(--spotifyGreen);
+  opacity: 1;
 }
 
 /*Textbox styles*/
-input[type="text"]{
-    background-color: var(--spotifyBlack);
-    border-style: solid;
-    border-color: var(--spotifyBlack);
-    border-bottom-color: var(--spotifyGreen);
-    color: white;
-    font: 'gothamlight';
-    font-size: 20px;
-    margin: 5px;
+input[type="text"] {
+  background-color: var(--spotifyBlack);
+  border-style: solid;
+  border-color: var(--spotifyBlack);
+  border-bottom-color: var(--spotifyGreen);
+  color: white;
+  font: "gothamlight";
+  font-size: 20px;
+  margin: 5px;
 }
 
-input[type="text"]:focus{
-    outline: none;
+input[type="text"]:focus {
+  outline: none;
 }
 
-input[type="text"]:hover{
-    background-color: var(--spotifyGrey);
+input[type="text"]:hover {
+  background-color: var(--spotifyGrey);
 }
 
-#preloader{
-    background: var(--spotifyBlack) url("assets/ui/preloader.gif") no-repeat center center;
-    background-size: 100px;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
+#preloader {
+  background: var(--spotifyBlack) url("assets/ui/preloader.gif") no-repeat
+    center center;
+  background-size: 100px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }
