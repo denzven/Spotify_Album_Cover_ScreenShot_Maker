@@ -51,9 +51,7 @@ window.onload = function () {
 
         //Images
         var [UIx, UIy, UIw, UIh] = [data[preset]["UI"]["x"], data[preset]["UI"]["y"], data[preset]["UI"]["w"], data[preset]["UI"]["h"]]
-        var [albumCoverx, albumCovery, albumCoverw, albumCoverh] = [
-            [data[preset]["albumCover"]["x"], data[preset]["albumCover"]["y"], data[preset]["albumCover"]["w"], data[preset]["albumCover"]["h"]]
-        ]
+        var [albumCoverx, albumCovery, albumCoverw, albumCoverh] = [data[preset]["albumCover"]["x"], data[preset]["albumCover"]["y"], data[preset]["albumCover"]["w"], data[preset]["albumCover"]["h"]]
         var [PALx, PALy, PALw, PALh] = [data[preset]["PAL"]["x"], data[preset]["PAL"]["y"], data[preset]["PAL"]["w"], data[preset]["PAL"]["h"]]
 
         //Text
@@ -98,11 +96,10 @@ window.onload = function () {
             albumCoverImage.onload = () => {
                 ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
             };
-            albumCoverImage.src = "assets/albumCovers/1.jpeg";
+            albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
         } catch (err) {
             console.log(err)
         }
-
         // Loading Fonts
         document.fonts.ready
             .then(() => {
