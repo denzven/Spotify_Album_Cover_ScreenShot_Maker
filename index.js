@@ -32,14 +32,12 @@ window.onload = function () {
     var jsonFile;
     var data;
     var res;
-    fetch("assets/presets.json").then(
-        res => res.json()
-    ).then(
-        data => jsonFile = JSON.parse(data)
-    );
-    var preset = "default";
+    var request = new XMLHttpRequest();
+    request.open("GET", "/assets/presets.json", false);
+    request.send(null)
+    var data = JSON.parse(request.responseText);
 
-    console.log(data)
+    console.log(data);
     //console.log(data.[preset].["UI"].["x"]) //24
 
     //Images
