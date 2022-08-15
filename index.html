@@ -60,12 +60,19 @@
         <a href="https://github.com/denzven/Spotify_Album_Cover_ScreenShot_Maker"> <i class="fa fa-github"></i> Source</a>
     </footer>
     <script type="text/javascript">
+
+        function sleep(ms) {
+           return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
         //preloader
         var preloader = document.getElementById("preloader");
         //preloader.style.display = "none";
         window.addEventListener("load",function(){
-            // sleep(2);
+            sleep(Math.floor(Math.random() * 2000) + 500).then(() => {
+            console.log("Webpage Loaded")
             preloader.style.display = "none";
+            });
         })
     </script>
 </body>
