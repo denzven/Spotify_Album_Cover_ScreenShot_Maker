@@ -116,6 +116,11 @@ window.onload = function () {
         try {
             if (isPAL.checked) {
                 albumCoverImage.onload = () => {
+                    ctx.shadowColor = '#000000';
+                    ctx.shadowBlur = 20;
+                    ctx.shadowOffsetX = 5;
+                    ctx.shadowOffsetY = 5;
+                    ctx.fill();
                     if (albumCoverImage.width > albumCoverImage.height) {
                         ctx.drawImage(albumCoverImage, (((albumCoverImage.width) / 2) - (albumCoverImage.height / 2)), 0, (albumCoverImage.height), (albumCoverImage.height), albumCoverx, albumCovery, albumCoverw, albumCoverh);
                     }
@@ -130,6 +135,11 @@ window.onload = function () {
                 albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
             } else {
                 albumCoverImage.onload = () => {
+                    ctx.shadowColor = '#000000';
+                    ctx.shadowBlur = 20;
+                    ctx.shadowOffsetX = 5;
+                    ctx.shadowOffsetY = 5;
+                    ctx.fill();
                     if (albumCoverImage.width > albumCoverImage.height) {
                         ctx.drawImage(albumCoverImage, (((albumCoverImage.width) / 2) - (albumCoverImage.height / 2)), 0, (albumCoverImage.height), (albumCoverImage.height), albumCoverx, albumCovery, albumCoverw, albumCoverh);
                     }
@@ -138,6 +148,11 @@ window.onload = function () {
                     }
                 };
                 albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
+                ctx.shadowColor = 'none';
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+                ctx.fill();
             };
         } catch (err) {
             console.log(err)

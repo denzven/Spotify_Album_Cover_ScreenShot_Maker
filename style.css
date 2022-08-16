@@ -67,7 +67,12 @@ body {
   font-size: 24px;
   color: var(--spotifyGreen);
   line-height: 50px;
-  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px;
+  height: fit-content;
+  box-shadow:  13px 13px 26px #101010, -13px -13px 26px #242424
+
 }
 
 footer {
@@ -97,9 +102,11 @@ a {
 
 #screenshotCanvas {
   height: 80%;
-  background-color: var(--spotifyGrey);
+  margin: 20px;
+  background-color: var(--spotifyBlack);
   border: solid 2px;
   border-color: var(--spotifyBlack);
+  box-shadow:  13px 13px 26px #101010, -13px -13px 26px #242424
 }
 
 #screenshotCanvas:hover {
