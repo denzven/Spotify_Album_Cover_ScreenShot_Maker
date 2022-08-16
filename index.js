@@ -116,7 +116,12 @@ window.onload = function () {
         try {
             if (isPAL.checked) {
                 albumCoverImage.onload = () => {
-                    ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
+                    if (albumCoverImage.width > albumCoverImage.height) {
+                        ctx.drawImage(albumCoverImage, (((albumCoverImage.width) / 2) - (albumCoverImage.height / 2)), 0, (albumCoverImage.height), (albumCoverImage.height), albumCoverx, albumCovery, albumCoverw, albumCoverh);
+                    }
+                    if (albumCoverImage.height > albumCoverImage.width) {
+                        ctx.drawImage(albumCoverImage, 0, (((albumCoverImage.height) / 2) - (albumCoverImage.width / 2)), (albumCoverImage.width), (albumCoverImage.width), albumCoverx, albumCovery, albumCoverw, albumCoverh);
+                    }
                     PALImage.onload = () => {
                         ctx.drawImage(PALImage, PALx, PALy, PALw, PALh)
                     };
@@ -125,7 +130,12 @@ window.onload = function () {
                 albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
             } else {
                 albumCoverImage.onload = () => {
-                    ctx.drawImage(albumCoverImage, albumCoverx, albumCovery, albumCoverw, albumCoverh)
+                    if (albumCoverImage.width > albumCoverImage.height) {
+                        ctx.drawImage(albumCoverImage, (((albumCoverImage.width) / 2) - (albumCoverImage.height / 2)), 0, (albumCoverImage.height), (albumCoverImage.height), albumCoverx, albumCovery, albumCoverw, albumCoverh);
+                    }
+                    if (albumCoverImage.height > albumCoverImage.width) {
+                        ctx.drawImage(albumCoverImage, 0, (((albumCoverImage.height) / 2) - (albumCoverImage.width / 2)), (albumCoverImage.width), (albumCoverImage.width), albumCoverx, albumCovery, albumCoverw, albumCoverh);
+                    }
                 };
                 albumCoverImage.src = URL.createObjectURL(albumCover.files[0]);
             };
