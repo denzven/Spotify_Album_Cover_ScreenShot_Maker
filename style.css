@@ -27,9 +27,9 @@
 }
 
 :root {
-  --spotifyBlack: #191414;
-  --spotifyGreen: #1DB954;
-  --spotifyGrey: #333333;
+  --spotifyBlack: #121212;
+  --spotifyGreen: #1ED760;
+  --spotifyGrey: #282828;
 }
 
 body {
@@ -55,7 +55,6 @@ body {
   text-align: center;
 }
 
-
 .options-wrapper {
   flex-grow: 1;
   display: flex;
@@ -71,8 +70,8 @@ body {
   padding: 20px;
   margin: 20px;
   height: fit-content;
-  box-shadow:  13px 13px 26px #101010, -13px -13px 26px #242424
-
+  max-width: 100vw;
+  box-shadow: 13px 13px 26px #101010, -13px -13px 26px #242424;
 }
 
 footer {
@@ -106,7 +105,7 @@ a {
   background-color: var(--spotifyBlack);
   border: solid 2px;
   border-color: var(--spotifyBlack);
-  box-shadow:  13px 13px 26px #101010, -13px -13px 26px #242424
+  box-shadow: 13px 13px 26px #101010, -13px -13px 26px #242424;
 }
 
 #screenshotCanvas:hover {
@@ -195,10 +194,18 @@ input[type="text"]:hover {
   background-color: var(--spotifyGrey);
 }
 
+/*Input File Style*/
+input[type="file"] {
+  white-space: normal;
+  word-wrap: break-word;
+  width: 200px;
+  overflow: auto;
+}
+
 #preloader {
   background: var(--spotifyBlack) url("assets/ui/preloader.gif") no-repeat center center;
   background-size: 100px;
-  position:absolute;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
