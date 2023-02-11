@@ -43,10 +43,10 @@ window.onload = function () {
         // ------------------------------------------- //
         //Coords List from JSON
         var request = new XMLHttpRequest();
-        request.open("GET", "https://raw.githubusercontent.com/denzven/Spotify_Album_Cover_ScreenShot_Maker/main/assets/presets.json", false);
+        //request.open("GET", "https://raw.githubusercontent.com/denzven/Spotify_Album_Cover_ScreenShot_Maker/main/assets/presets.json", false);
+        request.open("GET", "assets/presets.json", false);
         request.send(null)
         var data = JSON.parse(request.responseText);
-
         var preset = "default"
 
         //Images
